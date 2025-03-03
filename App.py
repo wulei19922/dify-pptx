@@ -13,7 +13,7 @@ def debug_demo( ):
    body=request.json
    p=PptService(body['words'])
    filePath=p.gernatePptFile()
-   return  filePath;
+   return  "https://h5.runnongji.com/api/download/"+filePath;
 
 @app.route('/download/<filename>')
 def download_ppt(filename):
