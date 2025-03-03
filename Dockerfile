@@ -12,6 +12,9 @@ ENV TZ=Asia/Shanghai
 RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone
 
+RUN wget https://github.com/jgm/pandoc/releases/download/2.16.2/pandoc-2.16.2-linux-amd64.tar.gz \
+    && tar xvzf pandoc-2.16.2-linux-amd64.tar.gz --strip-components=1 -C /usr/local \
+    && rm pandoc-2.16.2-linux-amd64.tar.gz
 # 设置工作目录
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1
