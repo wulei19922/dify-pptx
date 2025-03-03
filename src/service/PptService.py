@@ -1,8 +1,6 @@
 import os
 import uuid
 
-from pptx import Presentation
-import  datetime
 import pypandoc
 class PptService:
 
